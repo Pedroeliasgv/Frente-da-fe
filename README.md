@@ -1,76 +1,191 @@
-# React + TypeScript + Vite
+# ⛪ Frente da Fé
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+<img src="./src/assets/logo/Logo-IFF.png" alt="Frente da Fé" width="180"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Um portal moderno para conectar pessoas, fortalecer a comunidade e facilitar a gestão da igreja.
 
-## React Compiler
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![TanStack Router](https://img.shields.io/badge/TanStack-Router-FF4154?style=for-the-badge)
+![Framer Motion](https://img.shields.io/badge/Framer-Motion-000000?style=for-the-badge&logo=framer)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📖 Sobre
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O **Frente da Fé** é um portal desenvolvido para proporcionar uma experiência moderna aos visitantes e membros da igreja.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O projeto foi pensado para unir uma identidade visual contemporânea com funcionalidades que aproximam pessoas da comunidade, oferecendo uma navegação intuitiva e agradável.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
+## ✨ Funcionalidades
+
+- 🏠 Landing Page institucional
+- ⛪ Página sobre a igreja
+- 📅 Agenda de cultos
+- 🎉 Eventos
+- ❤️ Quero Fazer Parte
+- 💳 Página de doações
+- 📞 Contato
+- 🔐 Login
+- 📱 Layout totalmente responsivo
+- ⚡ Navegação rápida utilizando TanStack Router
+- 🎨 Interface moderna com Tailwind CSS
+- ✨ Animações suaves com Framer Motion
+
+---
+
+# 🖼️ Preview
+
+> Em breve...
+
+---
+
+# 🛠️ Tecnologias
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- TanStack Router
+- Framer Motion
+- Lucide React
+
+---
+
+# 📂 Estrutura
+
+```text
+src
+│
+├── assets
+│   ├── images
+│   └── logo
+│
+├── components
+│   ├── ui
+│   ├── home
+│   ├── layout
+│   └── common
+│
+├── routes
+│
+├── lib
+│
+└── styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 🚀 Executando o projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone o repositório
 
+```bash
+git clone https://github.com/Pedroeliasgv/Frente-da-fe.git
 ```
-# Frente-da-fe
+
+Entre na pasta
+
+```bash
+cd Frente-da-fe
+```
+
+Instale as dependências
+
+```bash
+npm install
+```
+
+Execute o projeto
+
+```bash
+npm run dev
+```
+
+Build de produção
+
+```bash
+npm run build
+```
+
+---
+
+# 🎨 Design
+
+O projeto segue uma linguagem visual inspirada em produtos como:
+
+- Apple
+- Stripe
+- Vercel
+- Framer
+- Linear
+
+Com foco em:
+
+- Minimalismo
+- Espaçamento
+- Tipografia
+- Performance
+- Experiência do usuário
+- Responsividade
+
+---
+
+# 🌎 Localização
+
+**Frente da Fé**
+
+📍 Alameda Grajaú, 129  
+Alphaville Industrial  
+Barueri • SP
+
+---
+
+# 🤝 Contribuição
+
+Contribuições são sempre bem-vindas.
+
+1. Faça um Fork
+2. Crie uma branch
+
+```bash
+git checkout -b feature/minha-feature
+```
+
+3. Commit
+
+```bash
+git commit -m "feat: minha feature"
+```
+
+4. Push
+
+```bash
+git push origin feature/minha-feature
+```
+
+5. Abra um Pull Request
+
+---
+
+# 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+---
+
+<div align="center">
+
+### Desenvolvido com ❤️ para a Igreja Frente da Fé
+
+**© 2026 Frente da Fé. Todos os direitos reservados.**
+
+</div>
