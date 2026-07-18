@@ -34,7 +34,7 @@ export function UpcomingServices() {
     <section className="relative overflow-hidden bg-[#faf7f5] py-28">
       <div className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#FF0000]/10 blur-3xl" />
       <div className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full bg-black/5 blur-3xl" />
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionTitle
           eyebrow="Próximos Cultos"
           title="Experiências que renovam"

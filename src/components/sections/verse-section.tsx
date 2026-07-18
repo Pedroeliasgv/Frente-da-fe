@@ -4,7 +4,7 @@ import { VerseCard } from '@/components/sections/verse-card'
 export function VerseSection() {
   return (
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <SectionTitle
           eyebrow="Palavra da Semana"
           title="Uma palavra de inspiração para o seu caminho"

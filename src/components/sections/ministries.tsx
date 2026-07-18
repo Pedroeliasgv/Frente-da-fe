@@ -28,11 +28,11 @@ const ministries = [
 
 export function Ministries() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f7f7] py-32">
+    <section className="relative overflow-hidden bg-[#f7f7f7] py-24">
       <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-red-500/10 blur-[140px]" />
       <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-red-500/10 blur-[150px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-6xl px-6">
         <SectionTitle
           eyebrow="Ministérios"
           title="Existe um lugar para você servir."
@@ -61,7 +61,7 @@ export function Ministries() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-10 text-white">
+              <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
                 <span className="mb-4 text-xs font-semibold tracking-[0.35em] text-red-400">
                   {item.category}
                 </span>

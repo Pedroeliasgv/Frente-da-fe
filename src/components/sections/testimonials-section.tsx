@@ -17,7 +17,7 @@ const testimonials = [
 export function TestimonialsSection() {
   return (
     <section className="bg-background px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <SectionTitle
           eyebrow="Depoimentos"
           title="Vozes que compartilham experiência e transformação"

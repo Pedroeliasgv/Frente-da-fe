@@ -4,7 +4,7 @@ import { SectionTitle } from '@/components/sections/section-title'
 
 const stats = [
   {
-    value: '25+',
+    value: '15+',
     label: 'Anos transformando vidas',
   },
   {
@@ -37,13 +37,13 @@ const pillars = [
 
 export function AboutUs() {
   return (
-    <section className="relative overflow-hidden bg-[#F7F7F7] py-32">
+    <section className="relative overflow-hidden bg-[#F7F7F7] py-24">
 
       <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-red-500/10 blur-[140px]" />
 
       <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-red-500/10 blur-[120px]" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-20 px-6 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-center gap-20 px-6 lg:grid-cols-2">
 
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -115,7 +115,7 @@ export function AboutUs() {
           <img
             src="/images/about.jpg"
             alt="Frente da Fé"
-            className="h-[700px] w-full rounded-[36px] object-cover shadow-2xl"
+            className="h-[700px] w-full rounded-[28px] object-cover shadow-2xl"
           />
 
           <div className="absolute -bottom-8 left-8 right-8 rounded-[28px] border border-white/20 bg-white/90 p-8 backdrop-blur-xl shadow-2xl">

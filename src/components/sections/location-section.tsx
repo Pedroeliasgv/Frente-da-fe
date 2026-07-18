@@ -4,7 +4,7 @@ import { Map } from '@/components/sections/map'
 export function LocationSection() {
   return (
     <section className="bg-background px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <SectionTitle
           eyebrow="Localização"
           title="Venha nos visitar em Alphaville"

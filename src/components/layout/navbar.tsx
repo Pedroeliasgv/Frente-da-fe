@@ -3,7 +3,7 @@ import { Link, useLocation } from '@tanstack/react-router'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import logo from '@/assets/logo/Logo-IFF.png'
+import logo from '@/assets/logo/Logo-B-IFF.png'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 

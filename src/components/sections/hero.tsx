@@ -18,7 +18,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/10" />
       </div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 pt-40 pb-24 lg:px-8 lg:pt-44">
+      <div className="relative mx-auto flex min-h-screen max-w-6xl items-center px-6 pt-40 pb-24 lg:px-8 lg:pt-44">
         <div className="max-w-2xl">
 
           {/* Badge */}

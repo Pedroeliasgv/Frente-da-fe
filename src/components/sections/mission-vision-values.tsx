@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Cross, Eye, Heart } from 'lucide-react'
+
 import { SectionTitle } from '@/components/sections/section-title'
 
 const cards = [
@@ -25,17 +26,8 @@ const cards = [
 
 export function MissionVisionValues() {
   return (
-    <section className="relative overflow-hidden bg-[#101010] py-36 text-white">
-
-      <div className="absolute inset-0">
-
-        <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-red-600/15 blur-[180px]" />
-
-        <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-red-600/10 blur-[180px]" />
-
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6">
+    <section className="bg-[#F7F7F7] py-24">
+      <div className="mx-auto max-w-6xl px-6">
 
         <SectionTitle
           eyebrow="Nossa Essência"
@@ -43,50 +35,121 @@ export function MissionVisionValues() {
           description="Nossa missão, visão e valores refletem aquilo que acreditamos e vivemos diariamente."
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .7 }}
-          className="mt-20 grid gap-8 lg:grid-cols-3"
-        >
+        <div className="mt-24 grid gap-20 lg:grid-cols-[1.15fr_0.85fr]">
 
-          {cards.map((item) => {
+          {/* Left */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+          >
 
-            const Icon = item.icon
+            <span className="rounded-full bg-[#FF0000]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#FF0000]">
+              Nossa identidade
+            </span>
 
-            return (
+            <h3 className="mt-8 max-w-xl text-5xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#101010]">
+              Uma igreja construída sobre o Evangelho de Cristo.
+            </h3>
 
-              <article
-                key={item.title}
-                className="group rounded-[36px] border border-white/10 bg-white/5 p-10 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-red-500/40 hover:bg-white/10"
-              >
+            <p className="mt-8 max-w-xl text-lg leading-8 text-[#666]">
+              Existimos para anunciar Jesus, formar discípulos e servir
+              pessoas. Tudo o que fazemos é guiado pela Palavra de Deus,
+              buscando excelência, comunhão e uma vida cheia da presença
+              do Espírito Santo.
+            </p>
 
-                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-red-600 to-red-500 shadow-[0_20px_60px_rgba(255,0,0,.30)]">
+            <div className="mt-14 grid gap-6 sm:grid-cols-3">
 
-                  <Icon size={28} />
+              <div>
+                <h4 className="text-4xl font-semibold text-[#101010]">
+                  Cristo
+                </h4>
 
-                </div>
-
-                <h3 className="mt-10 text-3xl font-bold">
-
-                  {item.title}
-
-                </h3>
-
-                <p className="mt-5 leading-8 text-white/70">
-
-                  {item.description}
-
+                <p className="mt-2 text-sm text-[#666]">
+                  Nosso fundamento.
                 </p>
+              </div>
 
-              </article>
+              <div>
+                <h4 className="text-4xl font-semibold text-[#101010]">
+                  Bíblia
+                </h4>
 
-            )
+                <p className="mt-2 text-sm text-[#666]">
+                  Nossa direção.
+                </p>
+              </div>
 
-          })}
+              <div>
+                <h4 className="text-4xl font-semibold text-[#101010]">
+                  Pessoas
+                </h4>
 
-        </motion.div>
+                <p className="mt-2 text-sm text-[#666]">
+                  Nossa missão.
+                </p>
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          {/* Right */}
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+            className="space-y-6"
+          >
+                        {cards.map((item, index) => {
+              const Icon = item.icon
+
+              return (
+                <motion.article
+                  key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.45,
+                    delay: index * 0.12,
+                  }}
+                  className="group rounded-[32px] border border-black/10 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#FF0000]/20 hover:shadow-xl"
+                >
+                  <div className="flex items-start justify-between">
+
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#FF0000]/10 transition-colors duration-300 group-hover:bg-[#FF0000]">
+
+                      <Icon
+                        size={28}
+                        className="text-[#FF0000] transition-colors duration-300 group-hover:text-white"
+                      />
+
+                    </div>
+
+                    <span className="text-sm font-medium uppercase tracking-[0.25em] text-[#999]">
+                      0{index + 1}
+                    </span>
+
+                  </div>
+
+                  <h3 className="mt-8 text-3xl font-semibold tracking-tight text-[#101010]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-5 leading-8 text-[#666]">
+                    {item.description}
+                  </p>
+                </motion.article>
+              )
+            })}
+
+          </motion.div>
+
+        </div>
 
       </div>
 
