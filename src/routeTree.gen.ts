@@ -15,6 +15,7 @@ import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CultosRouteImport } from './routes/cultos'
 import { Route as DoacoesRouteImport } from './routes/doacoes'
 import { Route as EventosRouteImport } from './routes/eventos'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as QueroFazerParteRouteImport } from './routes/quero-fazer-parte'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
@@ -50,6 +51,11 @@ const EventosRoute = EventosRouteImport.update({
   path: '/eventos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QueroFazerParteRoute = QueroFazerParteRouteImport.update({
   id: '/quero-fazer-parte',
   path: '/quero-fazer-parte',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/cultos': typeof CultosRoute
   '/doacoes': typeof DoacoesRoute
   '/eventos': typeof EventosRoute
+  '/login': typeof LoginRoute
   '/quero-fazer-parte': typeof QueroFazerParteRoute
   '/sobre': typeof SobreRoute
   '/admin/': typeof AdminIndexRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/cultos': typeof CultosRoute
   '/doacoes': typeof DoacoesRoute
   '/eventos': typeof EventosRoute
+  '/login': typeof LoginRoute
   '/quero-fazer-parte': typeof QueroFazerParteRoute
   '/sobre': typeof SobreRoute
   '/admin': typeof AdminIndexRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/cultos': typeof CultosRoute
   '/doacoes': typeof DoacoesRoute
   '/eventos': typeof EventosRoute
+  '/login': typeof LoginRoute
   '/quero-fazer-parte': typeof QueroFazerParteRoute
   '/sobre': typeof SobreRoute
   '/admin/': typeof AdminIndexRoute
@@ -117,6 +126,7 @@ export interface FileRouteTypes {
     | '/cultos'
     | '/doacoes'
     | '/eventos'
+    | '/login'
     | '/quero-fazer-parte'
     | '/sobre'
     | '/admin/'
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/cultos'
     | '/doacoes'
     | '/eventos'
+    | '/login'
     | '/quero-fazer-parte'
     | '/sobre'
     | '/admin'
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/cultos'
     | '/doacoes'
     | '/eventos'
+    | '/login'
     | '/quero-fazer-parte'
     | '/sobre'
     | '/admin/'
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   CultosRoute: typeof CultosRoute
   DoacoesRoute: typeof DoacoesRoute
   EventosRoute: typeof EventosRoute
+  LoginRoute: typeof LoginRoute
   QueroFazerParteRoute: typeof QueroFazerParteRoute
   SobreRoute: typeof SobreRoute
   AdminIndexRoute: typeof AdminIndexRoute
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EventosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/quero-fazer-parte': {
       id: '/quero-fazer-parte'
       path: '/quero-fazer-parte'
@@ -242,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   CultosRoute: CultosRoute,
   DoacoesRoute: DoacoesRoute,
   EventosRoute: EventosRoute,
+  LoginRoute: LoginRoute,
   QueroFazerParteRoute: QueroFazerParteRoute,
   SobreRoute: SobreRoute,
   AdminIndexRoute: AdminIndexRoute,
